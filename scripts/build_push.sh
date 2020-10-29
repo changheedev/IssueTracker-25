@@ -8,6 +8,8 @@ DOCKER_PASSWORD=$3
 
 docker login --username $DOCKER_USER --password $DOCKER_PASSWORD || exit 1
 
+ls -ls
+
 yarn workspace server build
 docker build -t $beRepoName ./server
 

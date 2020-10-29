@@ -7,6 +7,8 @@ COPY package.json .
 
 RUN yarn install --production
 
+RUN ls -la node_modules
+
 EXPOSE 8080
 
 CMD [ "node", "server.js" ]

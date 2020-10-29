@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const DotEnv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
@@ -49,6 +50,7 @@ module.exports = {
             }
           : false,
     }),
+    new DotEnv(),
   ],
   resolve: {
     alias: {},
